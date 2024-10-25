@@ -1,3 +1,4 @@
+/* Base styles */
 body {
     display: block;
     overflow-x: hidden;
@@ -8,11 +9,11 @@ body {
   }
   
   .navbar-brand img {
-    max-height: 50px;
+    max-height: 40px;
   }
   
   .navbar-brand {
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: 900;
     color: #33DBFF;
@@ -20,7 +21,7 @@ body {
   
   nav ul li a {
     color: #161616;
-    font-size: 22px;
+    font-size: 16px;
     margin: auto 10px;
   }
   
@@ -29,8 +30,8 @@ body {
   }
   
   section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 40px;
   }
   
   section h1 {
@@ -39,18 +40,22 @@ body {
     color: #33DBFF;
     text-align: left;
     margin-bottom: 20px;
+    font-size: 2rem;
   }
   
   section p {
     font-size: 16px;
     font-weight: 300;
+    line-height: 1.6;
   }
   
   button {
-    max-width: 50%;
+    max-width: 200px;
     border-radius: 50px !important;
+    padding: 10px 20px;
   }
   
+  /* Hero Section */
   #hero .col {
     justify-content: center;
     flex-direction: column;
@@ -59,34 +64,42 @@ body {
   
   #hero .img-col {
     justify-content: flex-end;
-    margin-top: 100px;
+    margin-top: 30px;
   }
   
   #hero img {
-    max-width: 130% !important;
-    width: 130%;
+    max-width: 100% !important;
+    width: 100%;
   }
   
   #hero .card {
     box-shadow: 11px 7px 16px #f9f9f9;
     border: 0;
     text-align: center;
-  }
-  
-  #hero .icon {
-    width: 50px;
-    height: 50px;
     margin-bottom: 20px;
   }
   
-  #projects .projects {
-    margin-bottom: 50px;
+  #hero .icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
   }
   
+  /* Projects Section */
+  #projects .projects {
+    margin-bottom: 30px;
+  }
+  
+  #projects .card {
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Section */
   #contact {
     text-align: center;
     background-color: #33DBFF;
     color: white;
+    padding: 40px 0;
   }
   
   #contact h1 {
@@ -97,9 +110,101 @@ body {
   #contact p a {
     font-weight: bold;
     color: rgb(6, 15, 1);
+    text-decoration: none;
   }
   
   #contact p a:hover {
     color: black;
   }
   
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    /* Navbar */
+    .navbar-brand {
+      font-size: 18px;
+    }
+    
+    .navbar-brand img {
+      max-height: 30px;
+    }
+  
+    nav ul li a {
+      font-size: 14px;
+      margin: auto 5px;
+    }
+  
+    /* Hero Section */
+    #hero {
+      text-align: center;
+      padding-top: 80px;
+    }
+  
+    #hero h1 {
+      text-align: center;
+      font-size: 1.75rem;
+    }
+  
+    #hero .img-col {
+      margin-top: 20px;
+      order: -1;
+    }
+  
+    #hero .card {
+      margin: 10px auto;
+    }
+  
+    button {
+      margin: 0 auto;
+      display: block;
+    }
+  
+    /* About Section */
+    #about-us {
+      text-align: center;
+    }
+  
+    #about-us h1 {
+      text-align: center;
+    }
+  
+    #about-us img {
+      margin-bottom: 20px;
+    }
+  
+    /* Projects Section */
+    #projects h1 {
+      text-align: center;
+    }
+  
+    #projects .card {
+      margin-bottom: 15px;
+    }
+  
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    section {
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+  
+    section h1 {
+      font-size: 1.5rem;
+    }
+  
+    #hero .card {
+      width: 100% !important;
+    }
+  
+    .card-text {
+      font-size: 14px;
+    }
+  
+    #contact {
+      padding: 30px 0;
+    }
+  }
